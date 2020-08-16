@@ -3,14 +3,21 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { PeriodicComponent } from './periodic/periodic.component';
+import { ModalModule } from '../app/_modal';
+
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PeriodicComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ModalModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,79 @@
+<div>
+    <li *ngFor="let ele of elements">
+
+        <div id="{{ele.number}}" class="Border" (mouseover)="ChangeText(ele.number)" (mouseout)="changeBack(ele.number)"  
+        *ngIf="ele.number <= 1" (click)="openModal('custom-modal-1', ele.link)">
+            <div class="centerText">
+                {{ele.number}}
+            </div>
+            <div class="centerText">
+                <b>{{ele.name}}</b>
+            </div>
+            <div class="centerText">
+                {{ele.subtext}}
+            </div>
+            <div class="centerText">
+                {{ele.mass}}
+            </div>
+        </div>
+    </li>
+    
+    <div class="fill" >
+
+
+
+    </div>
+
+    <li *ngFor="let ele of elements">
+
+        <div id="{{ele.number}}" class="Border" (mouseover)="ChangeText(ele.number)" (mouseout)="changeBack(ele.number)"  
+        *ngIf="ele.number >= 2 && ele.number <= 2">
+            <div class="centerText">
+                {{ele.number}}
+            </div>
+            <div class="centerText">
+                <b>{{ele.name}}</b>
+            </div>
+            <div class="centerText">
+                {{ele.subtext}}
+            </div>
+            <div class="centerText">
+                {{ele.mass}}
+            </div>
+        </div>
+    </li>
+    
+    <div class="fillTwo"> </div>
+    <li *ngFor="let ele of elements">
+
+        <div id="{{ele.number}}" class="Border" (mouseover)="ChangeText(ele.number)" (mouseout)="changeBack(ele.number)"  
+        *ngIf="ele.number >= 3">
+            <div class="centerText">
+                {{ele.number}}
+            </div>
+            <div class="centerText">
+                <b>{{ele.name}}</b>
+            </div>
+            <div class="centerText">
+                {{ele.subtext}}
+            </div>
+            <div class="centerText">
+                {{ele.mass}}
+            </div>
+        </div>
+    </li>
+
+</div>
+
+
+<jw-modal id="custom-modal-1">
+    <h1>Information</h1>
+    <iframe src="https://en.wikipedia.org/wiki/Hydrogen" id="website" title="link"></iframe>
+
+</jw-modal>
+
+<jw-modal id="custom-modal-2">
+    <h1>A Custom Modal!</h1>
+    <p>Home page text: <input type="text" ng="bodyText" /></p>
+    <button (click)="closeModal('custom-modal-1');">Close</button>
+</jw-modal>
